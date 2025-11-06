@@ -32,8 +32,8 @@ body {
     padding-inline : 1rem;
     padding-block : 0.8rem;
     border-radius : 0.5rem;
-    color : hsl(352.58deg 95.7% 92.76% / 80%);
-    background : hsl(349.72deg 89.16% 75.2%) ;
+    color: hsl(352.58deg 100% 97.52% / 80%);
+    background: hsl(349.72deg 48.91% 53.64%);
     text-decoration : none;
     transition : color 0.2s ease-in-out;
 }
