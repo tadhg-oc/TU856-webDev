@@ -29,13 +29,14 @@ body {
 }
 
 .headerA {
-    padding-inline : 1rem;
-    padding-block : 0.8rem;
-    border-radius : 0.5rem;
+padding-inline: 1rem;
+    padding-block: 0.8rem;
+    border-radius: 0.5rem;
     color: hsl(0deg 0% 100% / 80%);
     background: hsl(349.72deg 67.78% 33.35%);
-    text-decoration : none;
-    transition : color 0.2s ease-in-out;
+    text-decoration: none;
+    transition: color 0.2s 
+    ease-in-out;
 }
 
 .headerA:hover {
