@@ -2,95 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <title>Forums</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <header class="header">
-    <nav class="headerNav">
-         <ul class="headerUl">
-             <li><a href="../index.html" class="headerA">Home</a></li>
-             <li><a href="about.html" class="headerA">About</a></li>
-             <li><a href="forum.html" class="headerA">Forums</a></li>
-             <li><a href="contact.html" class="headerA">Contact</a></li>
-         </ul>
-     </nav>
- </header>
+   <nav class="headerNav">
+        <ul class="headerUl">
+            <li><a href="../index.html" class="headerA">Home</a></li>
+            <li><a href="about.html" class="headerA">About</a></li>
+            <li><a href="forum.html" class="headerA">Forums</a></li>
+            <li><a href="contact.html" class="headerA">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
- <body>
-    <div class="content">
-        <section>
-            <h1>Contact Us!</h1>
-            <form class="contactForum" id="contactForum">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<body>
+    <div>
+        <main>
+            <div class="body">
+                <h2>Enter a form post!</h2>
+                <h3>Please remember to always be respectful, and uphold our community guidelines</h3>
+            </div>
+            <div class="forum">
+                <form>
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" name="username"><br><br>
+                    </div>
+                    <div>
+                        <label for="forumPost">Enter forum post:</label>
+                        <input type="text" name="forumPost"><br><br>
+                    </div>
+                    <div>
+                        <input type="submit">
+                    <div>
+                </form>
+            </div>
 
-                <label for="email">Email</label>
-                <input type="text" id="email" name="emailaddress" placeholder="Your email..">
-
-                <label for="contactmethod">Preferred Contact Method</label>
-                <select id="contactmethod" name="prefferedContactMethod">
-                  <option value="email">Email</option>
-                  <option value="phone">Phone</option>
-                  <option value="none">None</option>
-                </select>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write something.."></textarea>
-            
-                <input type="submit" value="Submit">
-
-            </form>
-        </section>
-
-            <h2>Follow us on social media!</h2>
+            <div class="forumData">
+                <h1>Thank you for submiting your post!</h1>
+                <div class="data"></div>
+            </div>
+        </main>
     </div>
-
-         <div class="socials">
-            <p>an1m3h4v3n</p>
-            <p>anime.haven</p>
-            <p>anime_haven</p>
-         </div>
-
-    
-    <div class="images">
-        <img src="../images/fb.png" alt="facebook" style="display: block; margin: 0 auto; width: 100px; height: auto; padding-bottom: 20px;">
-        <img src="../images/ig.png" alt="insta" style="display: block; margin: 0 auto; width: 100px; height: auto; padding-bottom: 20px;">
-        <img src="../images/x.jpg" alt="twitter" style="display: block; margin: 0 auto; width: 100px; height: auto; padding-bottom: 20px;">
-    </div>
-
- </body> 
-
- <script>
-    const form = document.getElementById('contactForum');
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const nameField = form.elements['fname']
-        const emailField = form.elements['email']
-
-        const nameValue = nameField.value;
-        const emailValue = emailField.value;
-
-        if (!nameIsValid(nameValue)) {
-        alert('Please enter a valid name.');
-        return;
-        }
-
-        if (!emailIsValid(emailValue)) {
-        alert('Please enter a valid email address.');
-        return;
-        }
-
-        form.submit();
-    });
-
-    function nameIsValid(nameValue) {
-        return nameValue.trim().length > 1;
-    }
-
-    function emailIsValid(emailValue) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
-    }
-</script>
- 
+</body>
+    <section>
+        <h2>Join the Discussion!</h2>
