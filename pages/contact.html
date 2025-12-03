@@ -9,7 +9,7 @@
 <header class="header">
     <nav class="headerNav">
          <ul class="headerUl">
-             <li><a href="/TU856-webDev/index.html" class="headerA">Home</a></li>
+             <li><a href="../index.html" class="headerA">Home</a></li>
              <li><a href="about.html" class="headerA">About</a></li>
              <li><a href="forum.html" class="headerA">Forums</a></li>
              <li><a href="contact.html" class="headerA">Contact</a></li>
@@ -21,7 +21,26 @@
     <div class="content">
         <section>
             <h1>Contact Us!</h1>
-            <p>For any questions or queries, please contact us at animehaven@hotmail.com</p>
+            <form class="contactForum" id="contactForum">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="emailaddress" placeholder="Your email..">
+
+                <label for="contactmethod">Preferred Contact Method</label>
+                <select id="contactmethod" name="prefferedContactMethod">
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                  <option value="none">None</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.."></textarea>
+            
+                <input type="submit" value="Submit">
+
+            </form>
         </section>
 
             <h2>Follow us on social media!</h2>
@@ -41,4 +60,37 @@
     </div>
 
  </body> 
+
+ <script>
+    const form = document.getElementById('contactForum');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const nameField = form.elements['fname']
+        const emailField = form.elements['email']
+
+        const nameValue = nameField.value;
+        const emailValue = emailField.value;
+
+        if (!nameIsValid(nameValue)) {
+        alert('Please enter a valid name.');
+        return;
+        }
+
+        if (!emailIsValid(emailValue)) {
+        alert('Please enter a valid email address.');
+        return;
+        }
+
+        form.submit();
+    });
+
+    function nameIsValid(nameValue) {
+        return nameValue.trim().length > 1;
+    }
+
+    function emailIsValid(emailValue) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+    }
+</script>
  
